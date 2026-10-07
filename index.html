@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Facts</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0b1020;
+      color: #e8ecf8;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #151c3a;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    nav a {
+      color: #7fb2ff;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #ffd166;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #3a4470;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #1f2850;
+    }
+    footer {
+      background-color: #151c3a;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+    a {
+      color: #7fb2ff;
+    }
+    input, select, button {
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      cursor: pointer;
+    }
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .success { color: #6ee7a0; }
+    .error   { color: #ff8a8a; }
+    .note {
+      font-size: 14px;
+      color: #aab3d6;
+    }
+    /* Hidden spam-trap field: real visitors never see it */
+    .trap {
+      position: absolute;
+      left: -9999px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🚀 Space Facts</h1>
+    <p>A beginner-friendly page about our solar system</p>
+    <nav>
+      <a href="#planets">Planets</a>
+      <a href="#satellites">Satellites</a>
+      <a href="#links">Learn More</a>
+      <a href="#contact">Register</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="planets">
+      <h2>The Planets</h2>
+      <p>There are eight planets in our solar system. Here is a quick comparison:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Planet</th>
+            <th>Diameter (km)</th>
+            <th>Distance from Sun (million km)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Mercury</td><td>4,879</td><td>57.9</td></tr>
+          <tr><td>Venus</td><td>12,104</td><td>108.2</td></tr>
+          <tr><td>Earth</td><td>12,742</td><td>149.6</td></tr>
+          <tr><td>Mars</td><td>6,779</td><td>227.9</td></tr>
+          <tr><td>Jupiter</td><td>139,820</td><td>778.5</td></tr>
+          <tr><td>Saturn</td><td>116,460</td><td>1,433.5</td></tr>
+          <tr><td>Uranus</td><td>50,724</td><td>2,872.5</td></tr>
+          <tr><td>Neptune</td><td>49,244</td><td>4,495.1</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="satellites">
+      <h2>About Satellites</h2>
+      <p>A satellite is an object that orbits a larger body. Satellites can be:</p>
+      <ul>
+        <li><strong>Natural</strong>: like the Moon orbiting Earth</li>
+        <li><strong>Artificial</strong>: built by humans, like communication or weather satellites</li>
+      </ul>
+
+      <h3>Steps in a basic satellite mission</h3>
+      <ol>
+        <li>Design and build the satellite</li>
+        <li>Test it on the ground</li>
+        <li>Launch it on a rocket</li>
+        <li>Deploy it into orbit</li>
+        <li>Receive data from it (telemetry)</li>
+      </ol>
+    </section>
+
+    <section id="links">
+      <h2>Learn More</h2>
+      <ul>
+        <li><a href="https://www.nasa.gov" target="_blank">NASA</a></li>
+        <li><a href="https://www.isro.gov.in" target="_blank">ISRO</a></li>
+        <li><a href="https://www.esa.int" target="_blank">European Space Agency</a></li>
+      </ul>
+    </section>
+
+    <!-- REGISTRATION FORM -->
+    <section id="contact">
+      <h2>Register: Tell Us Your Favorite Planet</h2>
+      <p class="note">Your details are sent privately to the site owner and are not shown to other visitors.</p>
+
+      <form id="registerForm">
+        <label for="name">Your name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="100" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="you@example.com" maxlength="150" required><br><br>
+
+        <label for="planet">Favorite planet:</label><br>
+        <select id="planet" name="planet">
+          <option>Mercury</option>
+          <option>Venus</option>
+          <option>Earth</option>
+          <option>Mars</option>
+          <option>Jupiter</option>
+          <option>Saturn</option>
+          <option>Uranus</option>
+          <option>Neptune</option>
+        </select><br><br>
+
+        <p>Do you want to work in the space industry?</p>
+        <input type="radio" id="yes" name="career" value="Yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="maybe" name="career" value="Maybe">
+        <label for="maybe">Maybe</label><br><br>
+
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+        <label for="newsletter">Send me space news</label><br><br>
+
+        <!-- Spam trap: leave empty -->
+        <div class="trap" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" id="submitButton">Submit</button>
+        <p id="formMessage" class="message" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with HTML, CSS &amp; JavaScript • Space Facts © 2026</p>
+  </footer>
+
+  <script>
+    // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE (it ends with /exec)
+    var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxrEtRvwaWCbIh4-wDwm02oDzEUTomW9_6HaRzciXQgMdDVnLeXtDC2f0CEbgZsL7WK/exec";
+
+    var form = document.getElementById("registerForm");
+    var message = document.getElementById("formMessage");
+    var submitButton = document.getElementById("submitButton");
+
+    function showMessage(text, type) {
+      message.textContent = text;
+      message.className = "message " + type;
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // stop the page from reloading
+
+      if (SCRIPT_URL.indexOf("PASTE_") === 0) {
+        showMessage("Setup not finished: add your Web App URL in the code.", "error");
+        return;
+      }
+
+      // Collect the form values into a simple text body (no CORS preflight needed)
+      var data = new URLSearchParams(new FormData(form));
+
+      submitButton.disabled = true;
+      showMessage("Sending...", "note");
+
+      fetch(SCRIPT_URL, { method: "POST", body: data })
+        .then(function (response) { return response.json(); })
+        .then(function (result) {
+          if (result.result === "success") {
+            var name = document.getElementById("name").value.trim();
+            showMessage("Thank you, " + name + "! You are registered.", "success");
+            form.reset();
+          } else {
+            showMessage(result.message || "Could not register. Please try again.", "error");
+          }
+        })
+        .catch(function () {
+          showMessage("Could not reach the server. Please try again later.", "error");
+        })
+        .then(function () {
+          submitButton.disabled = false;
+        });
+    });
+  </script>
+
+</body>
+</html>
